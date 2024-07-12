@@ -1,0 +1,112 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(238, 151, 219);
+    background-image: url("fondo_hello_kity.avif");
+    }
+    .container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    }
+    .container .title {
+    font-size: 2.8em;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+    position: absolute;
+    }
+    .container .buttons {
+    margin-top: 80px;
+    margin-left: -130px;
+    }
+    .container .buttons .btn {
+    position: absolute;
+    padding: 1px 15px;
+    font-size: 2.5em;
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: 2px black solid;
+    border-radius: 5px;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+    }
+    .container .buttons > #btnno {
+    margin-left: 70px;
+    }
+    .heart {
+    background-color: rgb(255, 0, 242);
+    width: 15em;
+    height: 15em;
+    } 
+    .heart,
+    .contorno {
+    transform: rotate(45deg);
+    margin-top: 100px;
+    position: absolute;
+    border-radius: 5px;
+    animation: palpitar 1s linear infinite alternate;
+    will-change: transform;
+    }
+    .heart:before,
+    .heart:after {
+    background-color: rgb(255, 0, 242);
+    }
+    .heart:before,
+    .heart:after,
+    .contorno::before,
+    .contorno::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    }
+    .heart:before {
+    top: 0;
+    left: -50%;
+    }
+    .heart:after {
+    top: -50%;
+    left: 0;
+    }
+    .contorno {
+    background-color: rgb(0, 0, 0);
+    width: 15.5em;
+    height: 15.5em;
+    z-index: -2;
+    }
+    .contorno:before,
+    .contorno:after {
+    background-color: rgb(0, 0, 0);
+    }
+    .contorno:before {
+    top: 0;
+    left: -48%;
+    }
+    .contorno:after {
+    top: -48%;
+    left: 0;
+    }
+    @keyframes palpitar {
+    0% {
+    transform: rotate(45deg) scale(1);
+    }
+    50% {
+    transform: rotate(45deg) scale(1.1);
+    }
+    100% {
+    transform: rotate(45deg) scale(1);
+    }
+    }
